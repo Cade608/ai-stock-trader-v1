@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+    }
+
+body {
+margin: 0;
+background: #f4f6f8;
+color: #111827;
+font-family: -apple-system, BlinkMacSystemFont, “SF Pro Display”,
+“Segoe UI”, sans-serif;
+}
+
+.app {
+max-width: 760px;
+margin: auto;
+padding: 22px 16px 40px;
+}
+
+header {
+padding: 10px 4px 20px;
+}
+
+header h1 {
+margin: 0;
+font-size: 30px;
+font-weight: 900;
+}
+
+header h1 span {
+font-size: 13px;
+background: #111827;
+color: white;
+padding: 4px 7px;
+border-radius: 7px;
+vertical-align: middle;
+}
+
+header p {
+margin-top: 5px;
+color: #6b7280;
+}
+
+.search-box {
+background: white;
+padding: 16px;
+border-radius: 18px;
+border: 1px solid #e5e7eb;
+display: flex;
+gap: 10px;
+}
+
+input {
+flex: 1;
+min-width: 0;
+border: 1px solid #d1d5db;
+border-radius: 12px;
+padding: 13px;
+font-size: 17px;
+text-transform: uppercase;
+}
+
+button {
+border: none;
+border-radius: 12px;
+padding: 12px 18px;
+background: #111827;
+color: white;
+font-weight: 700;
+font-size: 15px;
+}
+
+button:active {
+transform: scale(.97);
+}
+
+#status {
+min-height: 25px;
+margin: 12px 4px;
+color: #6b7280;
+}
+
+.stock-card,
+.metric,
+.ai-card,
+.chart-card {
+background: white;
+border: 1px solid #e5e7eb;
+border-radius: 18px;
+box-shadow: 0 5px 20px rgba(0,0,0,.04);
+}
+
+.stock-card {
+padding: 18px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.stock-card h2 {
+margin: 0;
+font-size: 21px;
+}
+
+.stock-card p {
+margin: 5px 0 0;
+color: #6b7280;
+}
+
+.price-area {
+text-align: right;
+}
+
+#price {
+font-size: 29px;
+font-weight: 900;
+}
+
+#change {
+font-weight: 700;
+}
+
+.metrics {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 12px;
+margin-top: 14px;
+}
+
+.metric {
+padding: 16px;
+}
+
+.metric span {
+color: #6b7280;
+font-size: 13px;
+}
+
+.metric strong {
+display: block;
+margin-top: 7px;
+font-size: 20px;
+}
+
+.ai-card,
+.chart-card {
+margin-top: 14px;
+padding: 18px;
+}
+
+.ai-card h2,
+.chart-card h2 {
+margin-top: 0;
+}
+
+#signal {
+display: inline-block;
+padding: 8px 12px;
+background: #eef0f3;
+border-radius: 10px;
+font-weight: 900;
+}
+
+#summary {
+color: #374151;
+line-height: 1.6;
+}
+
+.analysis {
+border-top: 1px solid #eee;
+margin-top: 15px;
+}
+
+.analysis div {
+display: flex;
+justify-content: space-between;
+padding: 12px 0;
+border-bottom: 1px solid #eee;
+}
+
+.analysis span {
+color: #6b7280;
+}
+
+canvas {
+width: 100%;
+height: 220px;
+display: block;
+}
+
+footer {
+text-align: center;
+color: #9ca3af;
+font-size: 12px;
+padding: 20px 5px;
+}
+
+.hidden {
+display: none;
+}
+
+@media (min-width: 600px) {
+.metrics {
+grid-template-columns: repeat(4, 1fr);
+}
+}
