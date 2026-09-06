@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Stock V1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+<header>
+  <h1>AI STOCK <span>V1</span></h1>
+  <p>美股 AI 智能分析</p>
+</header>
+<section class="search-box">
+  <input
+    id="ticker"
+    type="text"
+    placeholder="输入股票代码，例如 NVDA"
+    value="AAPL"
+  >
+  <button id="analyze">
+    分析
+  </button>
+</section>
+<div id="status">
+  准备就绪
+</div>
+<section id="result" class="hidden">
+  <div class="stock-card">
+    <div>
+      <h2 id="name">Apple Inc.</h2>
+      <p id="symbol">AAPL</p>
+    </div>
+    <div class="price-area">
+      <strong id="price">--</strong>
+      <p id="change">--</p>
+    </div>
+  </div>
+  <div class="metrics">
+    <div class="metric">
+      <span>RSI 14</span>
+      <strong id="rsi">--</strong>
+    </div>
+    <div class="metric">
+      <span>SMA 20</span>
+      <strong id="sma20">--</strong>
+    </div>
+    <div class="metric">
+      <span>SMA 50</span>
+      <strong id="sma50">--</strong>
+    </div>
+    <div class="metric">
+      <span>数据点</span>
+      <strong id="points">--</strong>
+    </div>
+  </div>
+  <div class="ai-card">
+    <h2>🤖 AI 分析</h2>
+    <div id="signal">
+      --
+    </div>
+    <p id="summary">
+      --
+    </p>
+    <div class="analysis">
+      <div>
+        <span>趋势</span>
+        <strong id="trend">--</strong>
+      </div>
+      <div>
+        <span>动能</span>
+        <strong id="momentum">--</strong>
+      </div>
+      <div>
+        <span>风险</span>
+        <strong id="risk">--</strong>
+      </div>
+    </div>
+  </div>
+  <div class="chart-card">
+    <h2>📈 价格走势</h2>
+    <canvas id="chart"></canvas>
+  </div>
+</section>
+<footer>
+  AI Stock V1 仅供学习与演示，不构成投资建议。
+</footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
